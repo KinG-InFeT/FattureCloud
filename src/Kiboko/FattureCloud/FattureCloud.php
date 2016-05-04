@@ -68,4 +68,9 @@ class FattureCloud
     public function request($endpoint = 'richiesta/info', $data = null) {
         return $this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]);
     }
+
+    public function getAuth(  )
+    {
+        return $this->auth;
+    }
 }
