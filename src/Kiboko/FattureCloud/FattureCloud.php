@@ -57,7 +57,6 @@ class FattureCloud
             'PUT', 'POST', 'GET', 'HEAD', 'DELETE', 'OPTIONS'
         ];
         if($method && in_array($method,$valid)) $this->method = $method;
-        return $this;
     }
 
     public function request($endpoint = 'richiesta/info', $data = null) {

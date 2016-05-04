@@ -3,7 +3,7 @@ namespace Kiboko\FattureCloud\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
-class FattureCloud extends Facade {
+class FattureCloudFacade extends Facade {
     /**
      * Get the registered name of the component.
      *
