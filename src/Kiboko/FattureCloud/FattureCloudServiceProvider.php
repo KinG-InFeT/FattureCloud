@@ -38,7 +38,7 @@ class FattureCloudServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/config.php', 'fatture-cloud.php'
+            __DIR__.'/../../config/config.php', 'fatture-cloud'
         );
     }
 

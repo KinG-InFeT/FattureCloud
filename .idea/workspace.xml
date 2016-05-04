@@ -54,26 +54,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FattureCloudServiceProvider.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FattureCloudServiceProvider.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="504">
+              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
               <folding>
                 <element signature="e#145#237#0#PHP" expanded="true" />
                 <element signature="e#273#318#0#PHP" expanded="true" />
                 <element signature="e#594#643#0#PHP" expanded="true" />
-                <element signature="e#941#1030#0#PHP" expanded="true" />
+                <element signature="e#937#1026#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FattureCloud.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FattureCloud.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloud.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+            <state relative-caret-position="164">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
                 <element signature="e#230#293#0#PHP" expanded="true" />
                 <element signature="e#322#395#0#PHP" expanded="true" />
@@ -108,8 +108,8 @@
         <option value="$PROJECT_DIR$/src/FattureCloud.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/Facade/FattureCloudFacade.php" />
-        <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloud.php" />
+        <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -262,12 +262,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462363297031</updated>
-      <workItem from="1462363298440" duration="14045000" />
+      <workItem from="1462363298440" duration="14262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14045000" />
+    <option name="totallyTimeSpent" value="14262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -360,19 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="e#145#237#0#PHP" expanded="true" />
-            <element signature="e#273#318#0#PHP" expanded="true" />
-            <element signature="e#594#643#0#PHP" expanded="true" />
-            <element signature="e#941#1030#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -385,12 +372,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        <state relative-caret-position="164">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           <folding>
             <element signature="e#230#293#0#PHP" expanded="true" />
             <element signature="e#322#395#0#PHP" expanded="true" />
             <element signature="e#586#659#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding>
+            <element signature="e#145#237#0#PHP" expanded="true" />
+            <element signature="e#273#318#0#PHP" expanded="true" />
+            <element signature="e#594#643#0#PHP" expanded="true" />
+            <element signature="e#937#1026#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
