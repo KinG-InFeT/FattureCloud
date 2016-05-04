@@ -22,7 +22,7 @@ class FattureCloudServiceProvider extends ServiceProvider
         /*
          * Assign the configuration as publishable, and tag it as 'config'
          */
-        $configPath = __DIR__ . '/../../config/barcode.php';
+        $configPath = __DIR__ . '/../../config/config.php';
         $this->publishes([$configPath => config_path('fatture-cloud.php')], 'config');
 
         $this->app->bind('FattureCloud', function ($app)
@@ -36,7 +36,7 @@ class FattureCloudServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $configPath = __DIR__ . '/../../config/barcode.php';
+        $configPath = __DIR__ . '/../../config/config.php';
         $this->mergeConfigFrom($configPath, 'config');
     }
 
