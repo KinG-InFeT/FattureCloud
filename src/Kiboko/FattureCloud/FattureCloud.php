@@ -46,7 +46,7 @@ class FattureCloud
     
     protected function buildEndpoint()
     {
-        $this->base_url = implode("/", [$this->config->get('fatture-cloud.base_url'), $this->config->get('fatture-cloud.api_version')]);
+        $this->base_url = implode("/", [$this->config->get('fatture-cloud.base_url'), $this->config->get('fatture-cloud.api_version')]) . '/';
     }
 
     protected function guzzleClient()
