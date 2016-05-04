@@ -2,6 +2,7 @@
     "name": "kiboko/fatture-in-cloud-laravel",
     "description": "Wrapper API fatture in cloud Laravel",
     "keywords": ["laravel", "fatture-in-cloud", "invoices"],
+    "minimum-stability": "dev",
 	"authors": [
         {
             "name": "Matteo Schiona",
