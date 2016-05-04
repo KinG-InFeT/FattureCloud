@@ -22,7 +22,7 @@ class FattureCloud
         $this->config = $config;
         $this->auth();
         $this->buildEndpoint();
-        $this->buildEndpoint();
+        $this->guzzleClient();
     }
 
     /**
