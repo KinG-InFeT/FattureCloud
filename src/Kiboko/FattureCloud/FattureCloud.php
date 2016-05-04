@@ -73,4 +73,8 @@ class FattureCloud
     {
         return $this->auth;
     }
+    public function getConfig(  )
+    {
+        return $this->config;
+    }
 }
