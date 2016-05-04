@@ -65,7 +65,7 @@ class FattureCloud
         if($method && in_array($method,$valid)) $this->method = $method;
     }
 
-    public function request($endpoint = 'richiesta/info', $data = null) {
+    public function request($endpoint = 'richiesta/info', $data = []) {
         return $this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]);
     }
 
