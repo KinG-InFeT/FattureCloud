@@ -4,6 +4,7 @@ namespace Kiboko\FattureCloud;
 
 class FattureCloud
 {
+    private static $instance = null;
     protected $auth;
     protected $base_url;
     protected $client;
@@ -11,9 +12,10 @@ class FattureCloud
 
     public function __construct(  )
     {
-        
+        $this->auth();
+        $this->buildEndpoint();
     }
-    
+
     /**
      * Get from config the api auth keys
      * @return $this
@@ -33,7 +35,7 @@ class FattureCloud
         }
 
 
-        return $this;
+        return self::$this;
     }
     
     protected function buildEndpoint()

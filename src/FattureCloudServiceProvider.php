@@ -34,14 +34,7 @@ class FattureCloudServiceProvider extends ServiceProvider
     {
         $this->app->singleton('FattureCloud', function ()
         {
-            return $this->app->make('Kiboko\FattureCloud\FattureCloud');
-        });
-
-        // Shortcut so developers don't need to add an Alias in app/config/app.php
-        $this->app->booting(function ()
-        {
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('FattureCloud', 'Kiboko\FattureCloud\Facade\FattureCloud');
+            return new FattureCloud;
         });
 
         $this->mergeConfigFrom(
