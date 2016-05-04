@@ -57,13 +57,13 @@
       <file leaf-file-name="FattureCloudServiceProvider.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="721">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding>
                 <element signature="e#145#237#0#PHP" expanded="true" />
                 <element signature="e#273#318#0#PHP" expanded="true" />
-                <element signature="e#593#642#0#PHP" expanded="true" />
-                <element signature="e#939#1028#0#PHP" expanded="true" />
+                <element signature="e#594#643#0#PHP" expanded="true" />
+                <element signature="e#941#1030#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -258,12 +258,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462363297031</updated>
-      <workItem from="1462363298440" duration="13611000" />
+      <workItem from="1462363298440" duration="13682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13611000" />
+    <option name="totallyTimeSpent" value="13682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -380,13 +380,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="721">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
             <element signature="e#145#237#0#PHP" expanded="true" />
             <element signature="e#273#318#0#PHP" expanded="true" />
-            <element signature="e#593#642#0#PHP" expanded="true" />
-            <element signature="e#939#1028#0#PHP" expanded="true" />
+            <element signature="e#594#643#0#PHP" expanded="true" />
+            <element signature="e#941#1030#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
