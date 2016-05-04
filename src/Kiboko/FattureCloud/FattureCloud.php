@@ -1,18 +1,27 @@
 <?php
 namespace Kiboko\FattureCloud;
 
+use Illuminate\Contracts\Config\Repository as ConfigRepository;
 
 class FattureCloud
 {
-    private static $instance = null;
     protected $auth;
     protected $base_url;
     protected $client;
     protected $method = 'POST';
 
-    public function __construct(  )
-    {
+    /**
+     * @var \Illuminate\Contracts\Config\Repository
+     */
+    protected $config;
+
+    /**
+     * @param \Illuminate\Contracts\Config\Repository $config
+     */
+    public function __construct(ConfigRepository $config){
+        $this->config = $config;
         $this->auth();
+        $this->buildEndpoint();
         $this->buildEndpoint();
     }
 
@@ -29,18 +38,15 @@ class FattureCloud
         else
         {
             $this->auth = [
-                'api_uid' => config('fatture-cloud.auth.uid'),
-                'api_key' => config('fatture-cloud.auth.key')
+                'api_uid' => $this->config->get('fatture-cloud.auth.uid'),
+                'api_key' => $this->config->get('fatture-cloud.auth.key')
             ];
         }
-
-
-        return self::$this;
     }
     
     protected function buildEndpoint()
     {
-        $this->base_url = implode("/", [config('fatture-cloud.base_url'), config('fatture-cloud.api_version')]);
+        $this->base_url = implode("/", [$this->config->get('fatture-cloud.base_url'), $this->config->get('fatture-cloud.api_version')]);
     }
 
     protected function guzzleClient()

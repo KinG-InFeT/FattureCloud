@@ -1,5 +1,5 @@
 <?php
-namespace Kiboko\FattureCloud\Facade;
+namespace Kiboko\FattureCloud\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
