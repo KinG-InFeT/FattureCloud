@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="528">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -69,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FattureCloud.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FattureCloud.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloud.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
@@ -106,10 +106,10 @@
         <option value="$PROJECT_DIR$/src/FattureCloudServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Facade/FattureCloudFacade.php" />
         <option value="$PROJECT_DIR$/src/FattureCloud.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/Facade/FattureCloudFacade.php" />
         <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloudServiceProvider.php" />
         <option value="$PROJECT_DIR$/src/Kiboko/FattureCloud/FattureCloud.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -262,12 +262,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462363297031</updated>
-      <workItem from="1462363298440" duration="14850000" />
+      <workItem from="1462363298440" duration="14952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14850000" />
+    <option name="totallyTimeSpent" value="14952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -342,14 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Kiboko/FattureCloud/Facades/FattureCloudFacade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -392,6 +384,14 @@
             <element signature="e#322#395#0#PHP" expanded="true" />
             <element signature="e#585#658#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
