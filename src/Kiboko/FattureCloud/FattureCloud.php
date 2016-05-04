@@ -51,7 +51,7 @@ class FattureCloud
 
     protected function guzzleClient()
     {
-        $this->client = new GuzzleHttp\Client([
+        $this->client = new \GuzzleHttp\Client([
             'base_uri' => $this->base_url,
             'headers' => ['content-type' => 'application/json']
         ]);
