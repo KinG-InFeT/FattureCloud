@@ -66,7 +66,25 @@ class FattureCloud
     }
 
     public function request($endpoint = 'richiesta/info', $data = []) {
-        return $this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]);
+        return parseResponse($this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]));
+    }
+
+    protected function parseResponse($response) {
+        if(isJson($response)) return $response;
+
+        switch ($response->getStatusCode()) {
+            case '404':
+                return json_encode([
+                    'error' => "Endpoint non esistente",
+                    'error_code' => "404"
+                ]);
+            break;
+        }
+    }
+
+    function isJson($string) {
+        json_decode($string);
+        return (json_last_error() == JSON_ERROR_NONE);
     }
 
     public function getAuth(  )
