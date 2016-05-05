@@ -1,10 +1,7 @@
 <?php
 namespace Kiboko\FattureCloud;
 
-use GuzzleHttp\Exception\ClientException;
-use Illuminate\Contracts\Config\Repository as ConfigRepository;
-
-class Helpers extends FattureCloud
+Trait Helpers
 {
     /**
      * GENERICHE
