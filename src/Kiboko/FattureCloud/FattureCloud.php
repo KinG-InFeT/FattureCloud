@@ -1,6 +1,7 @@
 <?php
 namespace Kiboko\FattureCloud;
 
+use GuzzleHttp\Exception\ClientException;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 
 class FattureCloud
@@ -66,20 +67,33 @@ class FattureCloud
     }
 
     public function request($endpoint = 'richiesta/info', $data = []) {
-        return parseResponse($this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]));
+        $response = null;
+        try {
+            $response = $this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]);
+            return $this->parseResponse($response);
+        }
+        catch(ClientException $clientException) {
+            switch ($response->getResponse()->getStatusCode()) {
+                case '404':
+                    return json_encode([
+                        'error' => "Endpoint non esistente",
+                        'error_code' => "404"
+                    ]);
+                    break;
+            }
+        }
+
     }
 
     protected function parseResponse($response) {
         if(isJson($response)) return $response;
-
-        switch ($response->getStatusCode()) {
-            case '404':
-                return json_encode([
-                    'error' => "Endpoint non esistente",
-                    'error_code' => "404"
-                ]);
-            break;
+        else {
+            return json_encode([
+                'error' => "Non riesco a leggere la risposta",
+                'error_code' => "500"
+            ]);
         }
+
     }
 
     function isJson($string) {
