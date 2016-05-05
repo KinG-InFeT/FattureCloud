@@ -12,14 +12,14 @@ class FattureCloud
     protected $method = 'POST';
 
     /**
-     * @var \Illuminate\Contracts\Config\Repository
-     */
+    * @var \Illuminate\Contracts\Config\Repository
+    */
     protected $config;
 
     /**
      * @param \Illuminate\Contracts\Config\Repository $config
      */
-    public function __construct(ConfigRepository $config){
+    public function __construct( ConfigRepository $config ){
         $this->config = $config;
         $this->auth();
         $this->buildEndpoint();
@@ -30,7 +30,7 @@ class FattureCloud
      * Get from config the api auth keys
      * @return $this
      */
-    protected function auth($auth = null)
+    protected function auth( $auth = null )
     {
         if ($auth)
         {
@@ -45,12 +45,12 @@ class FattureCloud
         }
     }
     
-    protected function buildEndpoint()
+    protected function buildEndpoint( )
     {
         $this->base_url = implode("/", [$this->config->get('fatture-cloud.base_url'), $this->config->get('fatture-cloud.api_version')]) . '/';
     }
 
-    protected function guzzleClient()
+    protected function guzzleClient( )
     {
         $this->client = new \GuzzleHttp\Client([
             'base_uri' => $this->base_url,
@@ -66,14 +66,15 @@ class FattureCloud
         if($method && in_array($method,$valid)) $this->method = $method;
     }
 
-    public function request($endpoint = 'richiesta/info', $data = []) {
+    public function doRequest($endpoint = 'richiesta/info', $data = [])
+    {
         $response = null;
         try {
             $response = $this->client->request($this->method, $endpoint, ['json' => array_merge($data, $this->auth) ]);
-            return $this->parseResponse($response);
+            return $this->parseResponse($response->getBody());
         }
         catch(ClientException $clientException) {
-            switch ($response->getResponse()->getStatusCode()) {
+            switch ($clientException->getResponse()->getStatusCode()) {
                 case '404':
                     return json_encode([
                         'error' => "Endpoint non esistente",
@@ -85,34 +86,36 @@ class FattureCloud
 
     }
 
-    protected function parseResponse($response) {
-        if(isJson($response)) return $response;
+    protected function parseResponse($response)
+    {
+        if($this->isResponseValid($response)) return $response;
         else {
             return json_encode([
                 'error' => "Non riesco a leggere la risposta",
                 'error_code' => "500"
             ]);
         }
-
     }
 
-    function isJson($string) {
+    function isResponseValid($string)
+    {
         json_decode($string);
         return (json_last_error() == JSON_ERROR_NONE);
     }
 
-    public function getAuth(  )
+    public function getAuth( )
     {
         return $this->auth;
     }
 
-    public function getConfig(  )
+    public function getConfig( )
     {
         return $this->config;
     }
 
-    public function getClient(  )
+    public function getClient( )
     {
         return $this->client;
     }
+
 }
