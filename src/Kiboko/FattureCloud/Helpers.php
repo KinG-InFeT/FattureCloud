@@ -8,11 +8,11 @@ Trait Helpers
      **/
 
     public function doRichiestaInfo($data = []) {
-        return $this->doRequest('richiesta/info', $data);
+        return self::doRequest('richiesta/info', $data);
     }
 
     public function doInfo($data = []) {
-        return $this->doRequest('mail/lista', $data);
+        return self::doRequest('mail/lista', $data);
     }
 
 
@@ -21,23 +21,23 @@ Trait Helpers
      **/
 
     public function doClientiLista($data = []) {
-        return $this->doRequest('clienti/lista', $data);
+        return self::doRequest('clienti/lista', $data);
     }
 
     public function doClientiNuovo($data = []) {
-        return $this->doRequest('clienti/nuovo', $data);
+        return self::doRequest('clienti/nuovo', $data);
     }
 
     public function doClientiImporta($data = []) {
-        return $this->doRequest('clienti/importa', $data);
+        return self::doRequest('clienti/importa', $data);
     }
 
     public function doClientiModifica($data = []) {
-        return $this->doRequest('clienti/modifica', $data);
+        return self::doRequest('clienti/modifica', $data);
     }
 
     public function doClientiElimina($data = []) {
-        return $this->doRequest('clienti/elimina', $data);
+        return self::doRequest('clienti/elimina', $data);
     }
 
 
@@ -46,23 +46,23 @@ Trait Helpers
      **/
 
     public function doFornitoriLista($data = []) {
-        return $this->doRequest('fornitori/lista', $data);
+        return self::doRequest('fornitori/lista', $data);
     }
 
     public function doFornitoriNuovo($data = []) {
-        return $this->doRequest('fornitori/nuovo', $data);
+        return self::doRequest('fornitori/nuovo', $data);
     }
 
     public function doFornitoriImporta($data = []) {
-        return $this->doRequest('fornitori/importa', $data);
+        return self::doRequest('fornitori/importa', $data);
     }
 
     public function doFornitoriModifica($data = []) {
-        return $this->doRequest('fornitori/modifica', $data);
+        return self::doRequest('fornitori/modifica', $data);
     }
 
     public function doFornitoriElimina($data = []) {
-        return $this->doRequest('fornitori/elimina', $data);
+        return self::doRequest('fornitori/elimina', $data);
     }
 
 
@@ -71,23 +71,23 @@ Trait Helpers
      **/
 
     public function doProdottiLista($data = []) {
-        return $this->doRequest('prodotti/lista', $data);
+        return self::doRequest('prodotti/lista', $data);
     }
 
     public function doProdottiNuovo($data = []) {
-        return $this->doRequest('prodotti/nuovo', $data);
+        return self::doRequest('prodotti/nuovo', $data);
     }
 
     public function doProdottiImporta($data = []) {
-        return $this->doRequest('prodotti/importa', $data);
+        return self::doRequest('prodotti/importa', $data);
     }
 
     public function doProdottiModifica($data = []) {
-        return $this->doRequest('prodotti/modifica', $data);
+        return self::doRequest('prodotti/modifica', $data);
     }
 
     public function doProdottiElimina($data = []) {
-        return $this->doRequest('prodotti/elimina', $data);
+        return self::doRequest('prodotti/elimina', $data);
     }
 
 
@@ -96,27 +96,27 @@ Trait Helpers
      **/
 
     public function doFattureLista($data = []) {
-        return $this->doRequest('fatture/lista', $data);
+        return self::doRequest('fatture/lista', $data);
     }
 
     public function doFattureDettagli($data = []) {
-        return $this->doRequest('fatture/dettagli', $data);
+        return self::doRequest('fatture/dettagli', $data);
     }
 
     public function doFattureNuovo($data = []) {
-        return $this->doRequest('fatture/nuovo', $data);
+        return self::doRequest('fatture/nuovo', $data);
     }
 
     public function doFattureModifica($data = []) {
-        return $this->doRequest('fatture/modifica', $data);
+        return self::doRequest('fatture/modifica', $data);
     }
 
     public function doFattureElimina($data = []) {
-        return $this->doRequest('fatture/elimina', $data);
+        return self::doRequest('fatture/elimina', $data);
     }
 
     public function doFattureInfo($data = []) {
-        return $this->doRequest('fatture/info', $data);
+        return self::doRequest('fatture/info', $data);
     }
 
 
@@ -125,27 +125,27 @@ Trait Helpers
      **/
 
     public function doProformaLista($data = []) {
-        return $this->doRequest('proforma/lista', $data);
+        return self::doRequest('proforma/lista', $data);
     }
 
     public function doProformaDettagli($data = []) {
-        return $this->doRequest('proforma/dettagli', $data);
+        return self::doRequest('proforma/dettagli', $data);
     }
 
     public function doProformaNuovo($data = []) {
-        return $this->doRequest('proforma/nuovo', $data);
+        return self::doRequest('proforma/nuovo', $data);
     }
 
     public function doProformaModifica($data = []) {
-        return $this->doRequest('proforma/modifica', $data);
+        return self::doRequest('proforma/modifica', $data);
     }
 
     public function doProformaElimina($data = []) {
-        return $this->doRequest('proforma/elimina', $data);
+        return self::doRequest('proforma/elimina', $data);
     }
 
     public function doProformaInfo($data = []) {
-        return $this->doRequest('proforma/info', $data);
+        return self::doRequest('proforma/info', $data);
     }
 
     /**
@@ -153,27 +153,27 @@ Trait Helpers
      **/
 
     public function doOrdiniLista($data = []) {
-        return $this->doRequest('ordini/lista', $data);
+        return self::doRequest('ordini/lista', $data);
     }
 
     public function doOrdiniDettagli($data = []) {
-        return $this->doRequest('ordini/dettagli', $data);
+        return self::doRequest('ordini/dettagli', $data);
     }
 
     public function doOrdiniNuovo($data = []) {
-        return $this->doRequest('ordini/nuovo', $data);
+        return self::doRequest('ordini/nuovo', $data);
     }
 
     public function doOrdiniModifica($data = []) {
-        return $this->doRequest('ordini/modifica', $data);
+        return self::doRequest('ordini/modifica', $data);
     }
 
     public function doOrdiniElimina($data = []) {
-        return $this->doRequest('ordini/elimina', $data);
+        return self::doRequest('ordini/elimina', $data);
     }
 
     public function doOrdiniInfo($data = []) {
-        return $this->doRequest('ordini/info', $data);
+        return self::doRequest('ordini/info', $data);
     }
 
     /**
@@ -181,27 +181,27 @@ Trait Helpers
      **/
 
     public function doPreventiviLista($data = []) {
-        return $this->doRequest('preventivi/lista', $data);
+        return self::doRequest('preventivi/lista', $data);
     }
 
     public function doPreventiviDettagli($data = []) {
-        return $this->doRequest('preventivi/dettagli', $data);
+        return self::doRequest('preventivi/dettagli', $data);
     }
 
     public function doPreventiviNuovo($data = []) {
-        return $this->doRequest('preventivi/nuovo', $data);
+        return self::doRequest('preventivi/nuovo', $data);
     }
 
     public function doPreventiviModifica($data = []) {
-        return $this->doRequest('preventivi/modifica', $data);
+        return self::doRequest('preventivi/modifica', $data);
     }
 
     public function doPreventiviElimina($data = []) {
-        return $this->doRequest('preventivi/elimina', $data);
+        return self::doRequest('preventivi/elimina', $data);
     }
 
     public function doPreventiviInfo($data = []) {
-        return $this->doRequest('preventivi/info', $data);
+        return self::doRequest('preventivi/info', $data);
     }
 
 
@@ -210,27 +210,27 @@ Trait Helpers
      **/
 
     public function doNdcLista($data = []) {
-        return $this->doRequest('ndc/lista', $data);
+        return self::doRequest('ndc/lista', $data);
     }
 
     public function doNdcDettagli($data = []) {
-        return $this->doRequest('ndc/dettagli', $data);
+        return self::doRequest('ndc/dettagli', $data);
     }
 
     public function doNdcNuovo($data = []) {
-        return $this->doRequest('ndc/nuovo', $data);
+        return self::doRequest('ndc/nuovo', $data);
     }
 
     public function doNdcModifica($data = []) {
-        return $this->doRequest('ndc/modifica', $data);
+        return self::doRequest('ndc/modifica', $data);
     }
 
     public function doNdcElimina($data = []) {
-        return $this->doRequest('ndc/elimina', $data);
+        return self::doRequest('ndc/elimina', $data);
     }
 
     public function doNdcInfo($data = []) {
-        return $this->doRequest('ndc/info', $data);
+        return self::doRequest('ndc/info', $data);
     }
 
 
@@ -239,27 +239,27 @@ Trait Helpers
      **/
 
     public function doRicevuteLista($data = []) {
-        return $this->doRequest('ricevute/lista', $data);
+        return self::doRequest('ricevute/lista', $data);
     }
 
     public function doRicevuteDettagli($data = []) {
-        return $this->doRequest('ricevute/dettagli', $data);
+        return self::doRequest('ricevute/dettagli', $data);
     }
 
     public function doRicevuteNuovo($data = []) {
-        return $this->doRequest('ricevute/nuovo', $data);
+        return self::doRequest('ricevute/nuovo', $data);
     }
 
     public function doRicevuteModifica($data = []) {
-        return $this->doRequest('ricevute/modifica', $data);
+        return self::doRequest('ricevute/modifica', $data);
     }
 
     public function doRicevuteElimina($data = []) {
-        return $this->doRequest('ricevute/elimina', $data);
+        return self::doRequest('ricevute/elimina', $data);
     }
 
     public function doRicevuteInfo($data = []) {
-        return $this->doRequest('ricevute/info', $data);
+        return self::doRequest('ricevute/info', $data);
     }
 
 
@@ -268,27 +268,27 @@ Trait Helpers
      **/
 
     public function doDdtLista($data = []) {
-        return $this->doRequest('ddt/lista', $data);
+        return self::doRequest('ddt/lista', $data);
     }
 
     public function doDdtDettagli($data = []) {
-        return $this->doRequest('ddt/dettagli', $data);
+        return self::doRequest('ddt/dettagli', $data);
     }
 
     public function doDdtNuovo($data = []) {
-        return $this->doRequest('ddt/nuovo', $data);
+        return self::doRequest('ddt/nuovo', $data);
     }
 
     public function doDdtModifica($data = []) {
-        return $this->doRequest('ddt/modifica', $data);
+        return self::doRequest('ddt/modifica', $data);
     }
 
     public function doDdtElimina($data = []) {
-        return $this->doRequest('ddt/elimina', $data);
+        return self::doRequest('ddt/elimina', $data);
     }
 
     public function doDdtInfo($data = []) {
-        return $this->doRequest('ddt/info', $data);
+        return self::doRequest('ddt/info', $data);
     }
 
     /**
@@ -296,11 +296,11 @@ Trait Helpers
      **/
 
     public function doAcquistiLista($data = []) {
-        return $this->doRequest('acquisti/lista', $data);
+        return self::doRequest('acquisti/lista', $data);
     }
 
     public function doAcquistiDettagli($data = []) {
-        return $this->doRequest('acquisti/dettagli', $data);
+        return self::doRequest('acquisti/dettagli', $data);
     }
 
     /**
@@ -308,6 +308,6 @@ Trait Helpers
      **/
 
     public function doMailLista($data = []) {
-        return $this->doRequest('mail/lista', $data);
+        return self::doRequest('mail/lista', $data);
     }
 }
