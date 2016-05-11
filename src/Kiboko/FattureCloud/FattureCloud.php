@@ -2,7 +2,6 @@
 namespace Kiboko\FattureCloud;
 
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
-use GuzzleHttp\Psr7;
 
 class FattureCloud
 {
