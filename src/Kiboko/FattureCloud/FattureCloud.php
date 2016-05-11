@@ -82,7 +82,7 @@ class FattureCloud
         try {
             $params = array_merge($this->auth,$data);
             $response = $this->client->post($endpoint, array('json' => ($params)));
-            return $this->parseResponse($response->getBody());
+            return $this->parseResponse($response->getBody()->getContents());
         }
         catch(ClientException $clientException) {
             switch ($clientException->getResponse()->getStatusCode()) {
