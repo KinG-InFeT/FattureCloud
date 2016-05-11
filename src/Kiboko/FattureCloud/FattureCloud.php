@@ -101,7 +101,10 @@ class FattureCloud
 
     protected function parseResponse($response)
     {
-        if($this->isResponseValid($response)) return json_decode($response);
+        if($this->isResponseValid($response)) {
+            $response = (string) $response;
+            return $response;
+        }
         else {
             return json_encode([
                 'error' => "Non riesco a leggere la risposta",
