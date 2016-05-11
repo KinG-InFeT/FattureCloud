@@ -22,8 +22,6 @@ class FattureCloud
     public function __construct(ConfigRepository $config ){
         $this->config = $config;
         $this->auth();
-        $this->buildEndpoint();
-        $this->guzzleClient();
     }
 
     /**
@@ -47,24 +45,6 @@ class FattureCloud
         return $this;
     }
 
-    protected function buildEndpoint( )
-    {
-        $this->base_url = implode("/", [\Config::get('fatture-cloud.base_url'), \Config::get('fatture-cloud.api_version')]) . '/';
-
-        return $this;
-    }
-
-    protected function guzzleClient( )
-    {
-        $this->client = new \GuzzleHttp\Client([
-            'base_uri' => $this->base_url,
-            'headers' => ['content-type' => 'application/json'],
-            'verify' => false,
-        ]);
-
-        return $this;
-    }
-
     public function setRequestMetod($method = null)
     {
         $valid = [
@@ -81,8 +61,18 @@ class FattureCloud
         $data = ($data) ? $data : [];
         try {
             $params = array_merge($this->auth,$data);
-            $response = $this->client->post($endpoint, array('json' => ($params)));
-            return $this->parseResponse($response->getBody()->getContents());
+            $url = implode("/", [\Config::get('fatture-cloud.base_url'), \Config::get('fatture-cloud.api_version')]) . '/' . $endpoint;
+            $options = array(
+                "http" => array(
+                    "header"  => "Content-type: text/json\r\n",
+                    "method"  => "POST",
+                    "content" => json_encode($params)
+                ),
+            );
+            $context  = stream_context_create($options);
+            $result = file_get_contents($url, false, $context);
+
+            return $this->parseResponse($result);
         }
         catch(ClientException $clientException) {
             switch ($clientException->getResponse()->getStatusCode()) {
@@ -101,10 +91,7 @@ class FattureCloud
 
     protected function parseResponse($response)
     {
-        if($this->isResponseValid($response)) {
-            $response = (string) $response;
-            return $response;
-        }
+        if($this->isResponseValid($response)) return $response;
         else {
             return json_encode([
                 'error' => "Non riesco a leggere la risposta",
@@ -115,7 +102,7 @@ class FattureCloud
 
     private function isResponseValid($string)
     {
-        json_decode($string);
+        json_decode($string,true);
         return (json_last_error() == JSON_ERROR_NONE);
     }
 
